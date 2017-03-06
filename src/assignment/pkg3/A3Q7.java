@@ -78,7 +78,7 @@ public class A3Q7 {
                 karel.move();
                 karel.turnLeft();
             }
-            
+
             karel.turnLeft();
             karel.turnLeft();
             karel.turnLeft();

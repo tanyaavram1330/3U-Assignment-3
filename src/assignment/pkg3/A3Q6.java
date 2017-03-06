@@ -51,42 +51,42 @@ public class A3Q6 {
 
         //making a coutner
         int counter = 0;
-        
+
         //moving karel
         karel.move();
-        
+
         //while loop working as long as karel can pick up
-        while (karel.canPickThing()){
-            
+        while (karel.canPickThing()) {
+
             //karel picks things and counts up
-            if (karel.canPickThing()){
+            if (karel.canPickThing()) {
                 karel.pickAllThings();
                 counter++;
             }
-            
+
             //store counter as karel's backpack amount
             counter = karel.countThingsInBackpack();
             karel.turnLeft();
             //karel put things as he moves
-            for (int i = 0; i < counter; i++){
+            for (int i = 0; i < counter; i++) {
                 karel.putThing();
                 karel.move();
             }
-            
+
             //karel turns around once he is done a row
             karel.turnAround();
-            
+
             // a counter variable used to move back X amount of things 
-            for (int i = 0; i < counter;){
+            for (int i = 0; i < counter;) {
                 karel.move();
                 counter--;
             }
-            
+
             //moving to the next row
             karel.turnLeft();
             karel.move();
         }
-        
+
     }
 
 }
