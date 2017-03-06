@@ -67,19 +67,22 @@ public class A3Q7 {
         new Wall(kw, 5, 5, Direction.EAST);
         new Wall(kw, 4, 5, Direction.NORTH);
 
-        //making a counter
+//        //making a counter
         int counter = 0;
 
         //while looping for him to move
-        while (true) {
-            for (int i = 0; i < counter; i++){
+        while (counter < 4) {
+            for (int i = 0; i < 4; i++) {
                 karel.move();
                 karel.move();
                 karel.move();
                 karel.turnLeft();
             }
-            //for (int i)
-
+            
+            karel.turnLeft();
+            karel.turnLeft();
+            karel.turnLeft();
+            counter++;
         }
     }
 }
